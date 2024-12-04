@@ -1,4 +1,7 @@
-# Interactive Media Design CA2
+# Interactive Media Design Continuous Assessment 2
+This portfolio website was created for CA2 in Interactive Media Design.
+
+## Navbar
 
 ## Home Page
 
