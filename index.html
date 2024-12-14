@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='noindex' />  <!-- Prevent site being indexed -->
     <title>Portfolio</title>
-    <!-- Boostrap CSS CDN link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Boostrap CDN links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/92d9f8bc0a.js" crossorigin="anonymous"></script>
     <!-- CSS link -->
      <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="56"> <!-- data-bs-offset is navbar height -->
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" class="max-vw-100">
     <!-- Navbar -->
     <nav id="navbar-main" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Fiachra Curran</a>
-            <!-- Searchbar -->
-            <form id="search-form" class="d-flex">
-                <input id="search-input" class="form-control me-2" type="search" placeholder="Search">
-                <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
             <div class="collapse navbar-collapse">
+                <!-- Searchbar -->
+                <form id="search-form" class="d-flex">
+                    <input id="search-input" class="form-control me-2 form-inline" type="search" placeholder="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/FiachraCurran.docx">CV</a></li> <!-- Downloads CV -->
+                    <li class="nav-item"><a class="nav-link" href="/FiachraCurran.docx">CV</a></li>  <!-- Downloads CV -->
                 </ul>
             </div>
         </div>
@@ -39,34 +40,53 @@
     <header id="home" class="vh-100 bg-primary text-white text-center d-flex flex-column justify-content-center align-items-center">
         <h1 class="display-3">Welcome to my Portfolio</h1>
             <div class="text-center">
-                <img src="images/me.jpg" alt="Headshot picture" class="rounded-circle mb-4 profile">
+                <img src="images/me.jpg" alt="Headshot picture" class="rounded-circle mb-4 profile border border-dark">
             </div>
             <div class="mt-3">
                 <p class="lead">My name is Fiachra Curran and I am an aspiring Cloud Engineer</p>
             </div>
-        <a href="#about" class="btn btn-light btn-lg mt-3">About Me</a>
+            <div>
+                <a href="#about" class="btn btn-light btn-lg mt-3">About Me</a>
+                <a href="mailto:fiachracurran@gmail.com" class="btn btn-light btn-lg mt-3">Email Me</a>
+            </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about" class="vh-100">
         <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <div class="text-center">
-                <img src="images/me.jpg" alt="Headshot picture" class="rounded-circle mb-4 profile">
+            <h2 class="text-center">About Me</h2>
+            <div class="container d-flex">
+                <div class="half text-center">
+                    <img src="images/ascii.jpg" alt="ASCII Headshot" class="rounded-circle mb-4 profile border border-dark">
+                    <div>
+                        <a href="https://github.com/fiachracurran" target="_blank" rel="noopener noreferrer" class="text-center"><i class="fa-brands fa-github fa-2xl"></i></a>
+                        <a href="https://www.linkedin.com/in/fiachracurran/" target="_blank" rel="noopener noreferrer" class="text-center"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                        <a href="https://www.instagram.com/fiachracurran" target="_blank" rel="noopener noreferrer" class="text-center"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+                    </div>
+                </div>
+                <div class="half text-center">
+                    <img id="nasa-apod" src="" alt="NASA's Astronomy Picture of the Day" class="rounded-circle mb-4 profile border border-dark">
+                    <p class="text-secondary">NASA's Astronomy Picture of the Day</p>
+                </div>
             </div>
-            <p class="text-center">
+            <p>
                 I am a student in my Final Year of <b>Computing with Artificial Intelligence and Machine Learning</b> at Technological University Dublin, Tallaght Campus.</br>
                 I am passionate about developing software and designing well-architected cloud solutions.</br>
-                I enjoy pool, basketball, trivia, films, and reading.
+                I enjoy pool, basketball, trivia, astronomy, films, and reading.
             </p>
         </div>
     </section>
 
     <!-- Education section -->
-    <section id="education" class="py-5 bg-light">
+    <section id="education" class="min-vh-100">
         <div class="container">
-            <h2 class="text-center mb-4">Education</h2>
-            <p class="text-center">Overall GPA: <b>4.0</b></p>
+            <h2 class="text-center">Education</h2>
+            <div class="d-flex justify-content-center image-container">
+                <img src="images/tud.jpg" alt="Logo of Technological University Dublin" class="profile rounded-circle border border-dark">               
+                <p class="ms-4">
+                    I am a Final Year student of <a href="https://www.tudublin.ie/study/undergraduate/courses/computing-with-machine-learning---ai-tu862/" target="_blank" rel="noopener noreferrer"><b>Computing with Artificial Intelligence and Machine Learning</b></a> at Technological University Dublin, Tallaght Campus.
+                </p>
+            </div>
             <!-- Tabs Navigation -->
             <ul class="nav nav-tabs justify-content-center">
                 <li class="nav-item">
@@ -226,10 +246,10 @@
                         <div class="col-md-6">
                             <h4>Semester 6 (GPA 4.0)</h4>
                             <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex">
                                     Internship
                                 </li>
-                                <p class="list-group-item d-flex justify-content-between align-items-center">
+                                <p class="list-group-item d-flex">
                                     I worked as a Cloud and Platform Engineering Intern at Fidelity Investments from Jan -> Aug 2024.</br></br>
                                     I gained valuable experience with infrastructure-as-code, automated pipelines, cloud development and deployment, and working as a member of an agile squad.
                                 </p>
@@ -336,112 +356,219 @@
     </section>
     
     <!-- Experience section -->
-    <section id="experience" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Experience</h2>
-            <div class="container text-center">
-                <h5 class="text-center mb-4">Cloud and Platform Engineering Intern @ Fidelity Investments (Jan -> Aug 2024)</h5>
-                <p>
-                    Worked as part of an agile squad.</br>
-                    Created several frontend and backend plugins for an internal developer portal.</br>
-                    Created cloud-based API.</br>
-                    Managed infrastructure-as-code.</br>
-                    Created automated pipelines.
-                </p>
+    <section id="experience" class="min-vh-100">
+        <h2 class="text-center mb-4">Experience</h2>
+        <div class="container d-block d-sm-flex">
+            <div class="row g-3">
+                <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="card p-3">
+                        <div class="d-block d-sm-flex flex-column flex-sm-row">
+                            <img src="images/fi.jpg" alt="Logo of Fidelity Investments" class="rounded-circle profile border border-dark">
+                            <h5 class="ms-3">Cloud and Platform Engineering Intern @ Fidelity Investments (Jan 2024 -> Aug 2024)</h5>
+                        </div>
+                        <p>
+                            <a href="https://www.fidelityinvestments.ie/" rel="noopener noreferrer">Fidelity Investments</a>
+                            is a multinational financial services corporation and is a leading asset manager globally.
+                        </p>
+                        <p>
+                            Worked as part of an agile squad.</br>
+                            Created several frontend and backend plugins.</br>
+                            Created cloud-based API.</br>
+                            Managed infrastructure-as-code.</br>
+                            Created automated pipelines.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="card p-3">
+                        <div class="d-block d-sm-flex flex-column flex-sm-row">
+                            <img src="images/hcu.jpg" alt="Logo of Heritage Credit Union" class="rounded-circle profile border border-dark">
+                            <h5 class="ms-3"><h5 class="ms-3">Member Services Adviser @ Heritage Credit Union (June 2022 -> Sept 2023)</h5>
+                        </div>
+                        <p>
+                            <a href="https://heritagecu.ie/" rel="noopener noreferrer">Heritage Credit Union</a>
+                            is one of Ireland's largest credit unions, with 12 branches located around Dublin.
+                        </p>
+                        <p>
+                            Performed transactions.</br>
+                            Onboarded new members.</br>
+                            Took loan applications.</br>
+                            Resolved queries.</br>
+                            Opened and closed branches.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications section -->
-    <section id="certifications" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Certifications</h2>
-            <div class="container text-center">
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="37c31953-d5dc-42ed-bc96-5fb2b925be40" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2f444355-543e-46b6-8672-bcdd0ae723bf" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>    
+    <!-- Achievements section -->
+    <section id="achievements" class="min-vh-100">
+        <h2 class="text-center mb-4">Achievements</h2>
+        <div class="container d-block d-sm-flex">
+            <div class="row g-3">
+                <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="card mx-3 p-3">
+                        <h5 class="mb-4">Competitions</h5>
+                        <div id="achievements-carousel-indicators" class="carousel slide">
+                            <ol class="carousel-indicators">
+                              <li data-target="#achievements-carousel-indicators" data-bs-slide-to="0" class="active"></li>
+                              <li data-target="#achievements-carousel-indicators" data-bs-slide-to="1"></li>
+                              <li data-target="#achievements-carousel-indicators" data-bs-slide-to="2"></li>
+                              <li data-target="#achievements-carousel-indicators" data-bs-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/comp1.jpeg" alt="First slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="images/comp2.jpeg" alt="Second slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="images/comp3.jpeg" alt="Third slide">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="images/comp4.jpeg" alt="Fourth slide">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#achievements-carousel-indicators" role="button" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#achievements-carousel-indicators" role="button" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div>
+                            I have participated in several Cloud Computing events.
+                            <ul>
+                                <li><b>WorldSkills Ireland 2023 Cloud Computing - Winner</b></li>
+                                <li>Samsung Skills Friendship Challenge - Participant</li>
+                                <li>TU Dublin Hacking Healthcare Hackathon - Final 5</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="card mx-3 p-3 h-100">
+                        <h5 class="mb-4">Certifications</h5>
+                        <p>
+                            <b>20 Jan 2024</b> - I received the <a href="https://www.credly.com/badges/37c31953-d5dc-42ed-bc96-5fb2b925be40/public_url" target="_blank" rel="noopener noreferrer"><b>AWS Certified Solutions Architect Associate</b></a>  certification.
+                            </br></br>
+                            <b>30 Apr 2024</b> - I received the <a href="https://www.credly.com/badges/2f444355-543e-46b6-8672-bcdd0ae723bf/public_url" target="_blank" rel="noopener noreferrer"><b>AWS Certified Developer Associate</b></a> certification.
+                        </p>
+                        <ul>
+                            <li>Designing cost and performance optimised solutions for the cloud</li>
+                            <li>Developing, deploying and troubleshooting cloud applications</li>
+                            <li>Using CI/CD workflows in the cloud</li>
+                            <li>General working knowledge of a wide variety of AWS services</li>
+                        </ul>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="row">
+    <section id="projects" class="vh-100">
+        <div id="projects-container" class="container d-block d-sm-flex">
+            <div class="row g-3">
+                <h2 class="text-center mb-4">Projects</h2>
                 <!-- Project 1 -->
                 <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 1">
+                    <div class="card">
+                        <img src="images/project1.jpg" class="card-img-top d-none d-md-block" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Portfolio</h5>
-                            <p class="card-text">This portfolio website, originally created for a university assignment.</p>
+                            <h5 class="card-title text-center">2nd Year Project</h5>
+                            <p class="card-text">A website for car parts and stock management, created for my 2nd Year Project.</p>
                             <div class="text-center">
-                                <a href="https://github.com/fiachracurran/portfolio"><i class="fa-brands fa-github fa-2xl"></i></a>
+                                <a href="https://github.com/fiachracurran/2ndYearProject" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 2">
+                    <div class="card">
+                        <img src="images/project2.jpg" class="card-img-top d-none d-md-block" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Placeholder</h5>
-                            <p class="card-text">This is a placeholder, originally created for a university assignment.</p>
+                            <h5 class="card-title text-center">Portfolio</h5>
+                            <p class="card-text">This portfolio website, originally created for an assignment in 4th Year.</p>
                             <div class="text-center">
-                                <a href="https://github.com/fiachracurran/portfolio"><i class="fa-brands fa-github fa-2xl"></i></a>
+                                <a href="https://github.com/fiachracurran/portfolio" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project 3 -->
                 <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 3">
+                    <div class="card">
+                        <img src="images/project3.jpg" class="card-img-top d-none d-md-block" alt="Project 3">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Placeholder</h5>
-                            <p class="card-text">This is a placeholder, originally created for a university assignment.</p>
+                            <h5 class="card-title text-center">Image to ASCII Convertor</h5>
+                            <p class="card-text">A project that I worked on in my free time, a simple image to ASCII convertor.</p>
                             <div class="text-center">
-                                <a href="https://github.com/fiachracurran/portfolio"><i class="fa-brands fa-github fa-2xl"></i></a>
+                                <a href="https://github.com/fiachracurran/ASCII" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <form>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+    <section id="contact" class="vh-100">
+        <div class="container d-flex justify-content-center">
+            <div>
+                <h2 class="text-center mb-4">Contact Me</h2>
+                <p id="thank-you-message">
+                    <i class="fa-solid fa-check"></i>
+                    Successful submission
+                    </br>
+                    Thank you for contacting me!
+                </p>
+                <form id="contact-form">
+                    <p>You can reach me at my email using this form.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
                     </div>
-                </div>
-                <div class="mb-3">
-                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </div>
-            </form>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-dark text-white text-center">
         <p class="mb-0">Copyright © 2024 Fiachra Curran</p>
-        <!-- Google Maps integration to go here -->
+        <!-- Google Maps integration -->
+        <iframe
+        width="450"
+        height="300"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyASJ0dBc3LX-UIAZX-ZWyATwRyfRCPFLPY
+          &q=TU+Dublin+Tallaght+Campus,Dublin+Ireland">
+      </iframe>
     </footer>
 
     <!-- Bootstrap JS CDN link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <!-- JS link -->
     <script src="scripts/index.js"></script>

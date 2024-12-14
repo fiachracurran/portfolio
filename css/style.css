@@ -1,9 +1,88 @@
+/* Elements */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 56px;  /* to account for fixed navbar's height when clicking different section links */
+}
+
 body {
     font-family:monospace;
 }
+
+nav {
+    width: 100% !important;
+}
+
+i:hover{
+    animation: shake .3s ease-in-out .3s infinite alternate;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(-10deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(10deg) scale(1.2);
+    }
+}
+
+/* IDs */
+
+#thank-you-message {
+    display: none;
+}
+  
+#thank-you-message.show {
+    display: block;
+}
+
+/* Classes */
 
 .profile {
     width: 150px;
     height: 150px;
     object-fit: cover;
+}
+
+.one-third {
+    width: 33%;
+}
+
+.half {
+    width: 50%;
+}
+
+.two-thirds {
+    width: 66%
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-inner {
+    height: 0;
+    padding-bottom: 50%; /* carousel aspect ratio */
+}
+  
+.carousel-item {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* Phone Support */
+
+@media screen and (max-width: 600px){
+    .profile {
+        width: 100px !important;
+        height: 100px !important;
+    }
 }
