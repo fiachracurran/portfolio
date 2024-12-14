@@ -1,9 +1,6 @@
 # Interactive Media Design CA2
 
 ### TODO
-- [ ] Host site  
-  - [ ] Update fontawesome kit with domain of hosted site   
-  - [ ] Restrict Google API key with domain of hosted site
 
 ### Ongoing
 - [~] Update README.md with description of how site meets CA2's objectives  
@@ -27,6 +24,9 @@
 - [X] Add social media icons and links on About Me page  
 - [X] Display correctly on mobiles and tablets
 - [X] Implement ALL feedback given on 04/12/2024
+- [X] Host site  
+  - [X] Update fontawesome kit with domain of hosted site   
+  - [X] Restrict Google API key with domain of hosted site  
 
 ### Discarded
 - [ ] Include e-mail on Contact Me page  
