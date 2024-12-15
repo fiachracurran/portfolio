@@ -32,9 +32,11 @@ GitHub icons wiggle when hovered over.
 
 ## Contact Page
 Contact Me button is a different colour and has a dark border to mark it as the Clear Primary Action on this page.  
-Red asterisks are used as Required Field Marks for the Contact Form.
+Red asterisks are used as Required Field Marks for the Contact Form.  
+Thank you message is displayed on form submission, this message clears after 3 seconds and the form becomes visible again.
 
 ## JavaScript
 1. Astronomy Picture of the Day is fetched from NASA's APOD API
 2. Google Maps is embedded in the footer.
 3. Scrollspy is used to indicate current section in the navbar.
+4. Contact Me Form displays a thank you message which clears after 3 seconds so that the form is visible again.
