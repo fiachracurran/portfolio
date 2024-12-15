@@ -2,9 +2,10 @@
 This portfolio website was created for CA2 in Interactive Media Design.
 
 ## Navbar
+Contains a (non-functional) searchbar. Collapses on smaller screens, site is easy to scroll through on mobile and navbar would just be clutter for a single page site.
 
 ## Home Page
-About Me is a full white button, Email Me only has white outline -- this is to indicate that About Me is the intended Primary Action on this page.  
+About Me is a full white button with a dark border, Email Me only has white outline -- this is to indicate that About Me is the intended Primary Action on this page.  
 
 ## About Page
 
@@ -18,6 +19,7 @@ Progressive Disclosure is used, instead of listing all of the module results fro
 ## Projects Page
 
 ## Contact Page
+Contact Me button is a different colour and has a dark border to mark it as the Clear Primary Action on this page.
 
 ## CV download
 
