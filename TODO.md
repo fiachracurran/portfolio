@@ -27,6 +27,7 @@
 - [X] Host site  
   - [X] Update fontawesome kit with domain of hosted site   
   - [X] Restrict Google API key with domain of hosted site  
+- [X] Add progress bars to Experience section
 
 ### Discarded
 - [ ] Include e-mail on Contact Me page  
