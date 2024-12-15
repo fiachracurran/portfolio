@@ -3,7 +3,6 @@
 ### TODO
 
 ### Ongoing
-- [~] Update README.md with description of how site meets CA2's objectives  
 
 ### Completed ✓
 - [X] Create skeleton for portfolio site  
@@ -28,6 +27,7 @@
   - [X] Update fontawesome kit with domain of hosted site   
   - [X] Restrict Google API key with domain of hosted site  
 - [X] Add progress bars to Experience section
+- [X] Update README.md with description of how site meets CA2's objectives  
 
 ### Discarded
 - [ ] Include e-mail on Contact Me page  
