@@ -1,6 +1,10 @@
 # Interactive Media Design Continuous Assessment 2
 This portfolio website was created for CA2 in Interactive Media Design.  
-This README contains information about how this site meets the requirements/grading criteria, there may be some parts that I missed including in this section.
+This README contains information about how this site meets the requirements/grading criteria, there may be some parts that I missed including in this section.  
+All feedback given was implemented.  
+
+## Phone and Tablet Support
+The site is functional/displays well for small and medium screens. Testing was performed on different devices by using Google Chrome's DevTools.  
 
 ## Navbar
 Contains a (non-functional) searchbar.  
